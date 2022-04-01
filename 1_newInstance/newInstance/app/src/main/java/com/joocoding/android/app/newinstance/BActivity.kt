@@ -9,11 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 
 class BActivity : AppCompatActivity(){
     private lateinit var button: Button
-    private val onBtnClickListener = object : View.OnClickListener{
-        override fun onClick(v: View?) {
-            Log.d(TAG,"onClick()")
-            startNewIntent()
-        }
+    private val onBtnClickListener = View.OnClickListener {
+        Log.d(TAG,"onClick()")
+        startNewIntent()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +46,7 @@ class BActivity : AppCompatActivity(){
         Log.i(TAG,"startNewIntent()")
         val intent = Intent(this,BActivity::class.java)
         intent.putExtra("test","new intent")
-        //intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
         startActivity(intent)
     }
     override fun onNewIntent(intent: Intent?) {
