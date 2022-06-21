@@ -67,21 +67,18 @@
         android:id="@+id/crime_solved"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crime_solved_label"
-        android:focusable="false"
-        android:contentDescription="@string/crime_title_hint"/>
+       />
 
     <Button
         android:id="@+id/crime_suspect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crime_suspect_text"
-        android:focusable="false"
+        android:focusable="true"
        />
 
     <Button
-        android:id="@+id/crime_report"
+        android:id="@+id/next_test"
+        android:text="@string/next_test"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/crime_report_text"/>
+        android:layout_height="wrap_content" />
 </LinearLayout>
